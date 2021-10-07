@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="script (1).js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="ttable">
+        <table>
+            <tr id="first">
+                <td class="alice">Color</td>
+                <td class="alice">Basic Info</td>
+                <td class="alice">Energy</td>
+                <td class="alice">Multiply info</td>
+                <td class="alice">Energy Obtainment</td>
+                <td class="alice">Special Characteristic</td>
+                <td class="alice">Statistic</td>
+            </tr>
+            <tr class="second">
+                <td>
+                    <p>Gray</p>
+                </td>
+                <td>
+                    <p>Just the ground </p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>No multiply</td>
+                <td>
+                    <p>No energy</p>
+                </td>
+                <td>
+                    <p>No special characteristics</p>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr class="third">
+                <td>
+                    <p>Dirty Green</p>
+                </td>
+                <td>
+                    <p>It's just a Grass.</p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>
+                    <p>Can multiply once in 2 frames</p>
+                </td>
+                <td>
+                    <p>No energy</p>
+                </td>
+                <td>
+                    <p>No special characteristics</p>
+                </td>
+                <td id="grassCount"></td>
+
+            </tr>
+
+            <tr class="forth">
+                <td>
+                    <p>Hot Yellow</p>
+                </td>
+                <td>
+                    <p>Vegan</p>
+                </td>
+                <td>
+                    <p>35</p>
+                </td>
+                <td>
+                    <p>Multiplies after energy reaches 41+</p>
+                </td>
+                <td>
+                    <p>Eating Grass and damaging water </p>
+                </td>
+                <td>
+                    <p>No special characteristics</p>
+                </td>
+                <td id="grassEaterCount"></td>
+
+            </tr>
+
+            <tr class="fifth">
+
+                <td>
+                    <p>Red</p>
+                </td>
+                <td>
+                    <p>Bomb</p>
+                </td>
+                <td>
+                    <p>25</p>
+                </td>
+                <td>
+                    <p>Multiplies after energy reaches 20+</p>
+                </td>
+                <td>
+                    <p>Eating Vegan Virus</p>
+                </td>
+                <td>
+                    <p>Walks on , Grass, Vegan and the ground(grey)</p>
+                </td>
+                <td id="bombCount"></td>
+
+            </tr>
+
+            <tr class="sixth">
+
+                <td>
+                    <p>Night Purple</p>
+                </td>
+                <td>
+                    <p>Vegan Virus</p>
+                </td>
+                <td>
+                    <p>12</p>
+                </td>
+                <td>
+                    <p>Multiplies after 17+ </p>
+                </td>
+                <td>
+                    <p>Destroying Vegan and damaging water</p>
+                </td>
+                <td>
+                    <p>Walking on Grass and the ground</p>
+                </td>
+                <td id="gazanikCounter"></td>
+
+            </tr>
+
+            <tr class="seventh">
+                <td>
+                    <p>Blue</p>
+                </td>
+                <td>
+                    <p>Water</p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>
+                    <p>Has Strengh </p>
+                </td>
+                <td>
+                    <p>Strengh - 30 .after touching it strengh--</p>
+                </td>
+                <td>
+                    <p>When strengh = 0 , Turns to a BlackHole</p>
+                </td>
+                <td id="waterCounter"></td>
+
+            </tr>
+            <tr class="eighth">
+                <td>
+                    <p>Dark Brown</p>
+                </td>
+                <td>
+                    <p>Black Hole</p>
+                </td>
+                <td>
+                    <p>4</p>
+                </td>
+                <td>
+                    <p> It teleports </p>
+                </td>
+                <td>
+                    <p>When energy = 0 => disappears</p>
+                </td>
+                <td>
+                    <p>Destroying everything at his bottom,up,left and right</p>
+                </td>
+                <td id="blackholeCounter"></td>
+
+            </tr>
+            <tr class="nineth">
+                <td>
+                    <p>Light Orange </p>
+                </td>
+                <td>
+                    <p>Sun</p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>
+                    <p> Has Power = 0 </p>
+                </td>
+                <td>
+                    <p>When someone touchs him, he is getting stronger => power++</p>
+                </td>
+                <td>
+                    <p>When Power = 100 => Multiply</p>
+                </td>
+                <td id="sunCounter"></td>
+
+            </tr>
+            <tr class="tenth">
+                <td>
+                    <p>Ugly pink </p>
+                </td>
+                <td>
+                    <p>Filth</p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>
+                    <p> Has Power = 0 </p>
+                </td>
+                <td>
+                    <p>When someone touchs him, he is getting stronger => power++</p>
+                </td>
+                <td>
+                    <p>When Power = 100 => Multiply</p>
+                </td>
+                <td id="filthCounter"></td>
+
+            </tr>
+    
+
+
+    </table>
+</div>
+<div>
+        <button
+            style="height: 50px;width: 150px; margin-top:20px;float:left;background-color: #acacac;color: white;font-size: 20px;"
+            onclick="stopAndCount()">Count and restart </button>
+        <button
+            style="height: 50px;width: 150px; margin-bottom: 25px ;margin-top:20px;background-color: #acacac ;color: white;float:left;font-size: 20px;"
+            onclick="addBomb()">Add Bomb </button>
+        <button
+            style="height: 50px;width: 150px; margin-bottom: 25px ;margin-top:20px;background-color:#acacac ;color: white;float:left;font-size: 20px;"
+            onclick="smash()">Smash</button>
+    </div>
+</body>
+
+</html>

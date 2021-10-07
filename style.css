@@ -1,0 +1,131 @@
+
+tr td{
+    border: 1px solid black;
+    border-right-style:none ;
+    margin: 0;
+    font-size: large;
+    font-family: sans-serif;
+}
+#gray{
+    background-color: #acacac;
+}
+#orange{
+    background-color: orange;
+}
+
+#Yellow{
+    background-color: yellow;
+    
+}
+#pink{
+    background-color: #c90446;
+}
+#brown{
+    background-color:brown;
+}
+#purple{
+    background-color:#b114ec;
+}
+#cyun{
+    background-color: blue  ; 
+}
+
+
+body{
+    color:black;
+}
+
+
+
+
+table{
+    margin: 10px;
+    padding: 0;
+    border: 1px solid black;
+
+    
+}
+.ttable{
+    width :max-content;
+    margin:10px;
+}
+#first{
+    background-color: white;
+    color: black;
+}
+
+.second{
+    background-color: gray;
+    
+}
+
+.third{
+    background-color: #638005;
+}
+
+.forth{
+    background-color: yellow;
+    
+}
+.fifth{
+    background-color: #c90446;
+    
+}
+
+.sixth{
+    background-color: #b114ec;
+    
+}
+
+.seventh{
+    background-color: blue ; 
+  
+}
+
+.eighth{
+    background-color:#a52b2a;
+  
+}
+
+.nineth{
+    background-color:#ffa503  ; 
+  
+}
+
+.tenth{
+    background-color:#c90446  ; 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#greencolor{
+    background-color: #638005;
+}
+.green{
+    background-color: #638005;
+}
+.margin{
+    margin-top: 50px;
+}
+
+
